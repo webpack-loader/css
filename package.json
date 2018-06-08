@@ -1,0 +1,40 @@
+{
+  "name": "@webpack-loader/css",
+  "version": "1.0.0",
+  "description": "CSS Loader",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "lint": "standard --env jest",
+    "test": "jest --verbose --coverage",
+    "clean": "del-cli dist",
+    "release": "commitlint --to 'HEAD' && standard-version"
+  },
+  "dependencies": {
+    "@webpack-utilities/loader": "^1.0.0",
+    "@webpack-utilities/schema": "^1.0.0",
+    "postcss": "^6.0.0",
+    "postcss-value-parser": "^3.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.0",
+    "@webpack-utilities/test": "^1.0.0",
+    "del": "^3.0.0",
+    "del-cli": "^1.0.0",
+    "jest": "^23.0.0",
+    "standard": "^11.0.0",
+    "standard-version": "^4.0.0",
+    "webpack": "^4.0.0"
+  },
+  "homepage": "https://github.com/webpack-loader/css",
+  "repository": "https://github.com/webpack-loader/css",
+  "bugs": "https://github.com/webpack-loader/css/issues",
+  "author": "Michael Ciniawsky (@michael-ciniawsky) <michael.ciniawsky@gmail.com>",
+  "license": "MIT"
+}

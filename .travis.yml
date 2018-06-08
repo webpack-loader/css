@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - 'lts/*'
+  - 'stable'
+
+script: npm t
+
+after_success: npm i -D coveralls && cat ./coverage/lcov.info | node_modules/.bin/coveralls
+
+notifications:
+  email: false

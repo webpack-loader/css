@@ -1,0 +1,25 @@
+init:
+  - git config --global core.autocrlf input
+
+build: 'off'
+
+matrix:
+  fast_finish: true
+
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+  - npm i -g npm
+  - npm i
+
+before_test:
+  - cmd: npm i webpack
+
+test_script:
+  - node --version
+  - npm --version
+  - cmd: npm t
+
+environment:
+  matrix:
+    - nodejs_version: '10'
+    - nodejs_version: '8'
